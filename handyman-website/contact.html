@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Max's Handyman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! Reach out to us for quotes, inquiries, or general questions.</p>
+    </header>
+
+    <!-- Contact Form -->
+    <section>
+        <form id="contactForm" action="backend/saveContact.php" method="POST">
+            <label for="name">      Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">     Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">     Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+            
+            <label for="message">   Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">  Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Max's Handyman Services</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="services.html">Services</a>
+        </nav>
+    </footer>
+</body>
+</html>

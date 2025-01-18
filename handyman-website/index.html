@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max's Handyman Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <img src="assets/images/logo.png" alt="Max's Handyman Logo" class="logo">
+        <h1>Welcome to Max's Handyman Services</h1>
+        <p>Your trusted partner for reliable and professional home repairs.</p>
+        <button onclick="window.location.href='appointment.html'">Book an Appointment</button>
+    </header>
+
+    <section id="about">
+        <img src="assets/images/handyman.jpg" alt="Handyman" class="hero-image">
+        <div class="about-content">
+            <h2>About Max</h2>
+            <p>With over 10 years of experience, Max is dedicated to delivering high-quality services that ensure your home is functional, safe, and beautiful. Max specializes in a wide array of handyman services and takes pride in offering reliable solutions tailored to each client's unique needs.</p>
+            <p>Whether you need quick repairs, detailed installations, or regular maintenance, Max’s expertise ensures every job is handled professionally and efficiently. Trust Max to handle your home with care and precision!</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <img src="assets/icons/plumbing.png" alt="Plumbing Icon">
+            <h3>Plumbing</h3>
+            <p>Professional plumbing services including leak repairs, pipe installation, and fixture replacements.</p>
+        </div>
+        <div class="service-item">
+            <img src="assets/icons/electrical.png" alt="Electrical Icon">
+            <h3>Electrical Work</h3>
+            <p>Safe and certified electrical repairs, installations, and upgrades.</p>
+        </div>
+        <div class="service-item">
+            <img src="assets/icons/furniture.png" alt="Furniture Icon">
+            <h3>Furniture Assembly</h3>
+            <p>Quick and efficient furniture assembly for all types of furniture pieces.</p>
+        </div>
+        <a href="services.html" class="more-services-link">View All Services</a>
+    </section>
+
+    <section id="testimonials">
+        <h2>Customer Testimonials</h2>
+        <div id="testimonial-list"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Max's Handyman Services | Designed with care for our community</p>
+        <nav>
+            <a href="services.html">Services</a> | 
+            <a href="contact.html">Contact</a> | 
+            <a href="appointment.html">Book an Appointment</a>
+        </nav>
+        <form id="testimonialForm" action="backend/saveTestimonial.php" method="POST">
+            <h3>Leave a Testimonial</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="message">Your Testimonial:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div id="customerTestimonials">
+            <h3>What Our Customers Say</h3>
+            <div id="customerTestimonials"></div>
+            <div id="testimonialList"></div>
+        </div>
+    </footer>
+    
+    
+    
+    <script src="react-components/Testimonials.js" type="text/javascript"></script>
+    <script src="main.js"></script>
+</body>
+</html>

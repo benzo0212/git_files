@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Task Dashboard</h1>
+
+    <!-- Link to Task Creation Page for Admins and Managers -->
+    <div id="create-task-link" style="display: none;">
+        <a href="create_task.html" class="button">Create a New Task</a>
+    </div>
+
+    <!-- Task Creation Form for Admin and Manager -->
+    <div id="task-creation" style="display: none;">
+        <h2>Create a New Task</h2>
+        <form id="task-form">
+            <label for="title">Task Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Task Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="assignee">Assign To:</label>
+            <select id="assignee" name="assignee" required>
+                <!-- Options populated dynamically -->
+            </select>
+
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline" required>
+
+            <button type="submit">Create Task</button>
+        </form>
+    </div>
+
+    <!-- Task Board -->
+    <div class="task-board">
+        <div class="task-column" data-status="Pending">
+            <h2>Pending</h2>
+            <div class="task-list"></div>
+        </div>
+        <div class="task-column" data-status="In Progress">
+            <h2>In Progress</h2>
+            <div class="task-list"></div>
+        </div>
+        <div class="task-column" data-status="Completed">
+            <h2>Completed</h2>
+            <div class="task-list"></div>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div id="edit-task-modal" style="display: none;">
+        <h2>Edit Task</h2>
+        <form id="edit-task-form">
+            <label for="edit-title">Task Title:</label>
+            <input type="text" id="edit-title" name="title">
+
+            <label for="edit-description">Task Description:</label>
+            <textarea id="edit-description" name="description"></textarea>
+
+            <label for="edit-status">Task Status:</label>
+            <select id="edit-status">
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancel-edit">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Task Management System. All rights reserved.</p>
+        <div id="create-task-link" style="display: none;">
+            <a href="create_task.html" class="button">Create a New Task</a>
+        </div>
+    </footer>
+    
+</body>
+</html>
